@@ -1,7 +1,4 @@
-
 const SitecorePage = (): JSX.Element => {
-
-
   return (
     <div>
       <h1>JSS test without SSR/ISR</h1>
