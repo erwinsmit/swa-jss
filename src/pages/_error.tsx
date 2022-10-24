@@ -21,7 +21,7 @@ const ErrorPage: NextPage<ErrorPageProps> = ({ statusCode }) => (
           ? `A server-side ${statusCode} error occurred.`
           : 'A client-side error occurred.'}
       </p>
-      <a href="/">Go to the Home page</a>
+      {/* <a href="/">Go to the Home page</a> */}
     </div>
   </>
 );
