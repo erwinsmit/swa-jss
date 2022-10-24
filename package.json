@@ -78,7 +78,7 @@
     "fix-format": "npm run lint -- --fix && prettier --write \"src/**/*.{ts,tsx}\"",
     "lint": "eslint ./src/**/*.tsx ./src/**/*.ts ./scripts/**/*.ts",
     "bootstrap": "ts-node --project tsconfig.scripts.json scripts/bootstrap.ts",
-    "build": "npm-run-all --serial bootstrap next:build",
+    "build": "node log-stuff.js && npm-run-all --serial bootstrap next:build",
     "graphql:update": "ts-node --project tsconfig.scripts.json ./scripts/fetch-graphql-introspection-data.ts",
     "next:build": "next build",
     "next:dev": "cross-env NODE_OPTIONS='--inspect' next dev",
