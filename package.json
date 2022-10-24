@@ -75,6 +75,7 @@
   },
   "scripts": {
     "jss": "jss",
+    "fix-format": "npm run lint -- --fix && prettier --write \"src/**/*.{ts,tsx}\"",
     "lint": "eslint ./src/**/*.tsx ./src/**/*.ts ./scripts/**/*.ts",
     "bootstrap": "ts-node --project tsconfig.scripts.json scripts/bootstrap.ts",
     "build": "npm-run-all --serial bootstrap next:build",
