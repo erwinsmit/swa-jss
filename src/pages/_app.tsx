@@ -7,6 +7,9 @@ import 'assets/app.css';
 function App({ Component, pageProps }: AppProps<SitecorePageProps>): JSX.Element {
   const { dictionary, ...rest } = pageProps;
 
+  console.log('process.env.SITECORE_API_KEY', process.env.SITECORE_API_KEY);
+  console.log('process.env.SITECORE_API_HOST', process.env.SITECORE_API_HOST);
+
   return (
     // Use the next-localization (w/ rosetta) library to provide our translation dictionary to the app.
     // Note Next.js does not (currently) provide anything for translation, only i18n routing.

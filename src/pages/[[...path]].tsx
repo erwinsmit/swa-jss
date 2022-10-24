@@ -82,6 +82,8 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps = async (context) => {
   console.log('getStaticProps!', context);
 
+  // log out environment variables
+
   const props = await sitecorePagePropsFactory.create(context);
 
   return {
