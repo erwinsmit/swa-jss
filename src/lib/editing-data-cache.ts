@@ -1,5 +1,6 @@
 // import Cache, { CacheInstance } from 'sync-disk-cache';
-import { EditingData } from '@sitecore-jss/sitecore-jss-nextjs/editing';
+
+import { EditingData } from './editing-data';
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const { BlobServiceClient } = require('@azure/storage-blob');
