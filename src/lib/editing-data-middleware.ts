@@ -1,11 +1,21 @@
-import { QUERY_PARAM_EDITING_SECRET } from '@sitecore-jss/sitecore-jss-nextjs/types/editing/editing-data-service';
-import { getJssEditingSecret } from '@sitecore-jss/sitecore-jss-nextjs/types/utils';
+// import { QUERY_PARAM_EDITING_SECRET } from '@sitecore-jss/sitecore-jss-nextjs/types/editing/editing-data-service';
+// import { getJssEditingSecret } from '@sitecore-jss/sitecore-jss-nextjs/types/utils';
 import { NextApiRequest, NextApiResponse } from 'next';
 import { EditingData, isEditingData } from './editing-data';
 import { EditingDataCache, editingDataDiskCache } from './editing-data-cache';
 // import { EditingData, isEditingData } from './editing-data';
 // import { QUERY_PARAM_EDITING_SECRET } from './editing-data-service';
 // import { getJssEditingSecret } from '../utils';
+
+const QUERY_PARAM_EDITING_SECRET = 'secret';
+
+const getJssEditingSecret = (): string => {
+  const secret = process.env.JSS_EDITING_SECRET;
+  if (!secret || secret.length === 0) {
+    throw new Error('The JSS_EDITING_SECRET environment variable is missing or invalid.');
+  }
+  return secret;
+};
 
 export interface EditingDataMiddlewareConfig {
   /**
