@@ -80,10 +80,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
 // It may be called again, on a serverless function, if
 // revalidation (or fallback) is enabled and a new request comes in.
 export const getStaticProps: GetStaticProps = async (context) => {
-  console.log('getStaticProps!', context);
-
-  // log out environment variables
-
   const props = await sitecorePagePropsFactory.create(context);
 
   return {
