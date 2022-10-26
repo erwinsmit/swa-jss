@@ -1,4 +1,3 @@
-// import { editingDataService } from '@sitecore-jss/sitecore-jss-nextjs/editing';
 import { editingDataService } from 'lib/editing/editing-data-service';
 import { SitecorePageProps } from 'lib/page-props';
 import { GetServerSidePropsContext, GetStaticPropsContext } from 'next';
