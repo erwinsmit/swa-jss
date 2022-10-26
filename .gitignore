@@ -32,4 +32,4 @@ scjssconfig.json
 # vercel
 .vercel
 
-.env
+.env-local
