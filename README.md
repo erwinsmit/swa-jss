@@ -5,7 +5,7 @@ Azure Static Web App now supports Next.js fully (With ISR/SSG), but some changes
 The changes are done in the following files
 - [src/lib/page-props-factory/plugins/preview-mode.ts](src/lib/page-props-factory/plugins/preview-mode.ts)
 - [src/pages/api/editing/render.ts](src/pages/api/editing/render.ts)
-- [src/pages/api/editing/data/[key.ts]](src/pages/api/editing/data/[key.ts])
+- [src/pages/api/editing/data/[key.ts]](src/pages/api/editing/data/%5Bkey%5D.ts)
 
 The above files use a custom EditingDataCache. The files required for this custom EditingDataCache are all saved in the [src/lib/editing]('lib/editing')
 
