@@ -18,7 +18,7 @@ const containerName = process.env.AZURE_BLOB_CONTAINER as string;
  * A disk-based editing data cache implementation (required for hosting on Vercel via Serverless Functions)
  * @see EditingDataCache
  */
-export class EditingDataDiskCache implements EditingDataCache {
+export class EditingDataBlobCache implements EditingDataCache {
   private containerClient: ContainerClient;
 
   constructor() {
@@ -64,5 +64,5 @@ export class EditingDataDiskCache implements EditingDataCache {
   }
 }
 
-/** EditingDataDiskCache singleton */
-export const editingDataDiskCache = new EditingDataDiskCache();
+/** EditingDataBlobCache singleton */
+export const editingDataCache = new EditingDataBlobCache();
