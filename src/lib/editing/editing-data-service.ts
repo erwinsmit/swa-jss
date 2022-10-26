@@ -1,6 +1,6 @@
 import { AxiosDataFetcher, debug } from '@sitecore-jss/sitecore-jss';
 import { EditingData } from './editing-data';
-import { EditingDataCache, editingDataDiskCache } from './editing-data-cache';
+import { EditingDataCache, editingDataCache } from './editing-data-cache';
 import { PreviewData } from 'next';
 import { getJssEditingSecret, QUERY_PARAM_EDITING_SECRET } from './utils';
 
@@ -68,7 +68,7 @@ export class BasicEditingDataService implements EditingDataService {
    * @param {BasicEditingDataServiceConfig} [config] Editing data service config
    */
   constructor(config?: BasicEditingDataServiceConfig) {
-    this.editingDataCache = config?.editingDataCache ?? editingDataDiskCache;
+    this.editingDataCache = config?.editingDataCache ?? editingDataCache;
   }
 
   /**

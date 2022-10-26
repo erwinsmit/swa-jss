@@ -1,7 +1,7 @@
 import { getJssEditingSecret } from './utils';
 import { NextApiRequest, NextApiResponse } from 'next';
 import { EditingData, isEditingData } from './editing-data';
-import { EditingDataCache, editingDataDiskCache } from './editing-data-cache';
+import { EditingDataCache, editingDataCache } from './editing-data-cache';
 
 const QUERY_PARAM_EDITING_SECRET = 'secret';
 export interface EditingDataMiddlewareConfig {
@@ -35,7 +35,7 @@ export class EditingDataMiddleware {
    */
   constructor(config?: EditingDataMiddlewareConfig) {
     this.queryParamKey = config?.dynamicRouteKey ?? 'key';
-    this.editingDataCache = config?.editingDataCache ?? editingDataDiskCache;
+    this.editingDataCache = config?.editingDataCache ?? editingDataCache;
   }
 
   /**
