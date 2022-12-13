@@ -1,7 +1,7 @@
 # Sitecore JSS Next.js that can deploy to Azure Static Web Apps
 This repo has some changes to the original Sitecore JSS Next.js that allow it to be deployed to Azure Static Web Apps.
 
-![https://www.erwinsmit.com/static/57715677ddc24328f7ffb5132cc1efed/05649/new-architecture.png](Blob storage editing cache)
+![Blob storage editing cache](https://www.erwinsmit.com/static/57715677ddc24328f7ffb5132cc1efed/05649/new-architecture.png)
 
 Azure Static Web App now supports Next.js fully (With ISR/SSG), but some changes are necessary to the original JSS Next.js code to make it work.
 
